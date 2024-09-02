@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import logoImage from "../assets/logo.png";
+---
+
+<header>
+    <Image class="logo" src={logoImage} alt="Mura Fusion Restaurant" />
+    <!-- Hamburger icon -->
+    <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
+
+<style>
+    header {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 100vw;
+        padding: 1rem;
+        background: var(--black);
+    }
+    .logo {
+        width: 9.5rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        justify-content: center;
+        align-items: center;
+        width: 3.25rem;
+        height: 2.75rem;
+        margin-left: auto;
+        margin-right: 2rem;
+        border-radius: 1rem;
+        background: var(--accent);
+    }
+    .hamburger div {
+        width: 2.25rem;
+        height: 0.25rem;
+        border-radius: 1rem;
+        background: var(--black);
+    }
+</style>
