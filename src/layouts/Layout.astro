@@ -29,10 +29,22 @@ import '@fontsource-variable/montserrat';
         
         --header-height: 5.29rem;
     }
+    
     body {
         margin: 0;
         padding: 0;
         font-family: 'Montserrat Variable';
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+        text-align: center;
     }
 
     img {
@@ -40,8 +52,12 @@ import '@fontsource-variable/montserrat';
         height: auto;
     }
 
-    h1 {
+    p, a, h1, h2 {
         margin: 0;
         font-family: 'Montserrat Variable';
+    }
+    h2 {
+        color: var(--white);
+        font-size: 1.5rem;
     }
 </style>

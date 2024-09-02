@@ -1,0 +1,33 @@
+---
+import MenuCard from "../MenuCard.astro";
+
+import { Image } from "astro:assets";
+import sushi3Image from "../../assets/sushi-3.webp";
+---
+
+<section>
+    <h2>I NOSTRI MENÙ</h2>
+
+    <div class="cards">
+        <MenuCard text="MENÙ PRANZO" url="#" />
+        <MenuCard text="MENÙ CENA" url="#" />
+        <MenuCard text="MENÙ TAKEAWAY" url="#" />
+        <MenuCard text="MENÙ SUSHI DINNER BOX" url="#" />
+        <MenuCard text="MENÙ NOVITÀ" url="#" />
+        <MenuCard text="MENÙ BEVANDE E VINI" url="#" />
+    </div>
+
+    <Image src={sushi3Image} alt="Sushi" />
+</section>
+
+<style>
+    section {
+        background: var(--black);
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+</style>

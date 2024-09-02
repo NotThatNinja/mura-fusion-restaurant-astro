@@ -2,13 +2,18 @@
 import Layout from "../layouts/Layout.astro";
 import WhatsappIcon from "../components/WhatsappIcon.astro";
 import Header from "../components/Header.astro";
-import Hero from "../components/Hero.astro";
+import Hero from "../components/Sections/Hero.astro";
+import MenuSection from "../components/Sections/MenuSection.astro";
+import InfoSection from "../components/Sections/InfoSection.astro";
 ---
 
 <Layout title="Mura Fusion Restaurant - Sushi All You Can Eat a Rho">
+    <Header />
+    <WhatsappIcon />
+
     <main>
-        <WhatsappIcon />
-        <Header />
         <Hero />
+        <MenuSection />
+        <InfoSection />
     </main>
 </Layout>
