@@ -5,12 +5,24 @@ import logoImage from "../assets/logo.png";
 
 <header>
     <Image class="logo" src={logoImage} alt="Mura Fusion Restaurant" />
+
     <!-- Hamburger icon -->
-    <div class="hamburger">
+    <input type="checkbox" id="nav-toggle" />
+    <label for="nav-toggle" class="hamburger">
         <div></div>
         <div></div>
         <div></div>
-    </div>
+    </label>
+
+    <!-- Menu items -->
+    <nav>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/menu">MENÙ</a></li>
+            <li><a href="/about">CHI SIAMO</a></li>
+            <li><a href="/contact">CONTATTI</a></li>
+        </ul>
+    </nav>
 </header>
 
 <style>
@@ -27,6 +39,9 @@ import logoImage from "../assets/logo.png";
         width: 9.5rem;
     }
 
+    #nav-toggle {
+        display: none;
+    }
     .hamburger {
         display: flex;
         flex-direction: column;
@@ -45,5 +60,42 @@ import logoImage from "../assets/logo.png";
         height: 0.25rem;
         border-radius: 1rem;
         background: var(--black);
+        transition: transform 0.4s, opacity 0.4s;
+    }
+
+    nav {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        top: var(--header-height);
+        left: 0;
+        background: var(--black);
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        margin: 0;
+        padding: 1.25rem;
+    }
+    nav ul li a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    /* Toggle nav */
+    #nav-toggle:checked ~ nav {
+        display: block;
+    }
+    #nav-toggle:checked ~ .hamburger div:nth-child(1) {
+        transform: translate(0, 0.5rem) rotate(-45deg);
+    }
+    #nav-toggle:checked ~ .hamburger div:nth-child(2) {
+        opacity: 0;
+    }
+    #nav-toggle:checked ~ .hamburger div:nth-child(3) {
+        transform: translate(0, -0.5rem) rotate(45deg);
     }
 </style>
