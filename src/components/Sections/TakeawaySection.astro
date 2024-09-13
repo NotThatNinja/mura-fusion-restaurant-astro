@@ -1,0 +1,47 @@
+---
+import TakeawayCard from "../TakeawayCard.astro";
+---
+
+<section>
+    <h2>BOX TAKEAWAY</h2>
+    <p>Spendendo più di €40 avrete una bibita in omaggio (lo sconto del 20% sulle box non è applicato)</p>
+
+    <div class="cards">
+        <TakeawayCard
+            title="SMALL"
+            price="€27,90"
+            description="5 piatti a scelta + 1 in regalo"
+        />
+        <TakeawayCard
+            title="MEDIUM"
+            price="€42,90"
+            description="8 piatti a scelta + 2 in regalo"
+        />
+        <TakeawayCard
+            title="BIG"
+            price="€53,90"
+            description="10 piatti a scelta + 2 in regalo"
+        />
+        <TakeawayCard
+            title="SPECIAL PARTY"
+            price="€79,90"
+            description="15 piatti a scelta + 3 in regalo"
+        />
+    </div>
+</section>
+
+<style>
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    @media screen and (min-width: 1000px) {
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+    }
+</style>

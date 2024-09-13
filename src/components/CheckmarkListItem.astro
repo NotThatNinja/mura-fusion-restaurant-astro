@@ -1,0 +1,26 @@
+---
+const {text} = Astro.props;
+---
+
+<li><i class="bi bi-check-lg"></i>{text}</li>
+
+<style>
+    li {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+    i {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    @media screen and (min-width: 1000px) {
+        li {
+            font-size: 1.5rem;
+        }
+        i {
+            font-size: 3rem;
+        }
+    }
+</style>

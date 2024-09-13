@@ -2,6 +2,11 @@
 const { title } = Astro.props;
 
 import '@fontsource-variable/montserrat';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
+import WhatsappIcon from "../components/WhatsappIcon.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -18,16 +23,22 @@ import '@fontsource-variable/montserrat';
         <title>{title}</title>
     </head>
     <body>
+        <Header />
+        <WhatsappIcon />
+
         <slot />
+
+        <Footer />
     </body>
 </html>
 <style is:global>
     :root {
         --accent: #8f7600;
         --black: #000000;
-        --white: #ffffff;
+        --white: #F1F1F1;
         
         --header-height: 5.29rem;
+        --desktop-header-height: 9.29rem;
     }
     
     body {
@@ -45,6 +56,7 @@ import '@fontsource-variable/montserrat';
         gap: 1rem;
         padding: 1.5rem;
         text-align: center;
+        background: var(--white);
     }
     main section:first-of-type {
         margin-top: var(--header-height);
@@ -59,8 +71,38 @@ import '@fontsource-variable/montserrat';
         margin: 0;
         font-family: 'Montserrat Variable';
     }
+    p, li {
+        font-weight: 500;
+    }
     h2 {
-        color: var(--white);
+        color: var(--accent);
         font-size: 1.5rem;
+    }
+
+    @media screen and (min-width: 1000px) {
+        section {
+            padding: 3rem;
+            gap: 2rem;
+            align-items: center;
+        }
+        main section:first-of-type {
+            margin-top: var(--desktop-header-height);
+            padding-top: 4rem;
+        }
+        section p:first-of-type {
+            font-size: 1.5rem;
+            max-width: 75rem;
+        }
+
+        img {
+            max-width: 27.5rem;
+        }
+
+        p, li {
+            font-size: 1.25rem;
+        }
+        h2 {
+            font-size: 2.75rem;
+        }
     }
 </style>

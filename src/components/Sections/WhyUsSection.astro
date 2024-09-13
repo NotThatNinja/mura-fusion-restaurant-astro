@@ -1,0 +1,54 @@
+---
+import CheckmarkListItem from "../CheckmarkListItem.astro";
+---
+
+<section>
+    <div>
+        <h2>PERCHÉ MANGIARE DA NOI</h2>
+
+        <ul>
+            <CheckmarkListItem text="Parcheggio ampio interno gratuito" />
+            <CheckmarkListItem text="Arredamento moderno e unico, adatto per famiglie, coppie e amici" />
+            <CheckmarkListItem text="Zone privé per un'esperienza tranquilla e originale" />
+            <CheckmarkListItem text="Ampia scelta di piatti, freschi e di qualità" />
+            <CheckmarkListItem text="Il bagno, parcheggio, ingresso e i tavoli sono accessibili per chi è in sedia a rotelle" />
+        </ul>
+    </div>
+</section>
+
+<style>
+    section {
+        padding: 1rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/locale.jpg');
+        background-position: 0 50%;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.6);
+    }
+    h2 {
+        color: var(--black);
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1000px) {
+        section {
+            padding: 5rem;
+        }
+        div {
+            padding: 2rem;
+        }
+    }
+</style>

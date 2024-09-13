@@ -33,7 +33,7 @@ import logoImage from "../assets/logo.png";
         position: fixed;
         width: 100vw;
         padding: 1rem;
-        background: var(--black);
+        background: var(--white);
     }
     .logo {
         width: 9.5rem;
@@ -69,7 +69,7 @@ import logoImage from "../assets/logo.png";
         width: 100vw;
         top: var(--header-height);
         left: 0;
-        background: var(--black);
+        background: var(--white);
     }
     nav ul {
         display: flex;
@@ -77,6 +77,7 @@ import logoImage from "../assets/logo.png";
         gap: 1.25rem;
         margin: 0;
         padding: 1.25rem;
+        list-style: none;
     }
     nav ul li a {
         color: var(--accent);
@@ -97,5 +98,27 @@ import logoImage from "../assets/logo.png";
     }
     #nav-toggle:checked ~ .hamburger div:nth-child(3) {
         transform: translate(0, -0.5rem) rotate(45deg);
+    }
+
+    @media screen and (min-width: 1000px) {
+        header {
+            justify-content: center;
+        }
+        .hamburger {
+            display: none;
+        }
+
+        nav {
+            display: block;
+        }
+        nav ul {
+            flex-direction: row;
+            justify-content: center;
+            gap: 4rem;
+            background: var(--accent);
+        }
+        nav ul li a {
+            color: var(--white);
+        }
     }
 </style>
