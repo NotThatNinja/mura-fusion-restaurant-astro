@@ -1,8 +1,73 @@
+---
+import { Image } from "astro:assets";
+import Image1 from "../assets/gallery/1.jpg";
+import Image2 from "../assets/gallery/2.jpg";
+import Image3 from "../assets/gallery/3.jpg";
+import Image4 from "../assets/gallery/4.jpg";
+import Image5 from "../assets/gallery/5.jpg";
+import Image6 from "../assets/gallery/6.jpg";
+import Image7 from "../assets/gallery/7.jpg";
+import Image8 from "../assets/gallery/8.jpg";
+import Image9 from "../assets/gallery/9.jpg";
+---
+
 <div class="gallery">
     <div class="slide">
-
+        <Image src={Image1} alt="Immagine 1" />  
     </div>
     <div class="slide">
-        
+        <Image src={Image2} alt="Immagine 2" />
+    </div>
+    <div class="slide">
+        <Image src={Image3} alt="Immagine 3" />
+    </div>
+    <div class="slide">
+        <Image src={Image4} alt="Immagine 4" />
+    </div>
+    <div class="slide">
+        <Image src={Image5} alt="Immagine 5" />
+    </div>
+    <div class="slide">
+        <Image src={Image6} alt="Immagine 6" />
+    </div>
+    <div class="slide">
+        <Image src={Image7} alt="Immagine 7" />
+    </div>
+    <div class="slide">
+        <Image src={Image8} alt="Immagine 8" />
+    </div>
+    <div class="slide">
+        <Image src={Image9} alt="Immagine 9" />
     </div>
 </div>
+
+<style>
+    .slide {
+        display: none;
+    }
+
+    @media screen and (min-width: 1000px) {
+        img {
+            max-width: 35rem;
+        }
+    }
+</style>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        const slides = document.querySelectorAll('.slide');
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = 'block';
+        setTimeout(showSlides, 3000);
+    }
+</script>
