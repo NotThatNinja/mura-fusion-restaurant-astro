@@ -14,6 +14,9 @@ import heroImage from "../../assets/hero.jpg";
 </section>
 
 <style>
+    section {
+        margin-bottom: calc(100vh - 3rem - var(--header-height));
+    }
     img {
         position: absolute;
         max-width: none;
@@ -58,6 +61,10 @@ import heroImage from "../../assets/hero.jpg";
     }
 
     @media screen and (min-width: 1000px) {
+        section {
+            margin-bottom: calc(100vh - 10rem - var(--header-height));
+        }
+
         div {
             gap: 2rem;
         }
