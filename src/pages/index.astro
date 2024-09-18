@@ -7,16 +7,28 @@ import WhyUsSection from "../components/Sections/WhyUsSection.astro";
 import ReviewsSection from "../components/Sections/ReviewsSection.astro";
 import GallerySection from "../components/Sections/GallerySection.astro";
 import ContactsSection from "../components/Sections/ContactsSection.astro";
+import CheckmarkListItem from "../components/CheckmarkListItem.astro";
 ---
 
 <Layout title="Mura Fusion Restaurant - Sushi All You Can Eat a Rho">
     <main>
         <Hero />
-        <MenuSection />
+
+        <MenuSection title="I NOSTRI MENÙ" />
         <TakeawaySection />
-        <WhyUsSection />
+
+        <WhyUsSection title="PERCHÉ MANGIARE DA NOI" img="/mura-fusion-restaurant-astro/locale.jpg">
+            <CheckmarkListItem text="Parcheggio ampio interno gratuito" />
+            <CheckmarkListItem text="Arredamento moderno e unico, adatto per famiglie, coppie e amici" />
+            <CheckmarkListItem text="Zone privé per un'esperienza tranquilla e originale" />
+            <CheckmarkListItem text="Ampia scelta di piatti, freschi e di qualità" />
+            <CheckmarkListItem text="Il bagno, parcheggio, ingresso e i tavoli sono accessibili per chi è in sedia a rotelle" />
+        </WhyUsSection>
+
         <ReviewsSection />
+
         <GallerySection />
+
         <ContactsSection />
     </main>
 </Layout>

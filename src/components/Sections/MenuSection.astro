@@ -1,4 +1,6 @@
 ---
+const { title } = Astro.props;
+
 import MenuCard from "../MenuCard.astro";
 
 import { Image } from "astro:assets";
@@ -6,7 +8,7 @@ import sushi3Image from "../../assets/sushi-3.png";
 ---
 
 <section>
-    <h2>I NOSTRI MENÙ</h2>
+    <h2>{title}</h2>
     <p>La lista di tutti i nostri menù <strong>aggiornata</strong> con piatti gustosi, freschi e di qualità</p>
 
     <div class="cards">

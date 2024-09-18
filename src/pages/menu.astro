@@ -5,6 +5,8 @@ import TextImage from "../components/TextImage.astro";
 import MenuSection from "../components/Sections/MenuSection.astro";
 import TakeawaySection from "../components/Sections/TakeawaySection.astro";
 import ContactsSection from "../components/Sections/ContactsSection.astro";
+import WhyUsSection from "../components/Sections/WhyUsSection.astro";
+import CheckmarkListItem from "../components/CheckmarkListItem.astro";
 
 import sushi1Image from "../assets/sushi-1.png";
 import sushi2Image from "../assets/sushi-2.png";
@@ -53,8 +55,16 @@ import sushi2Image from "../assets/sushi-2.png";
             </div>
         </TextImage>
 
-        <MenuSection />
+        <MenuSection title="TUTTI I MENÙ" />
         <TakeawaySection />
+
+        <WhyUsSection title="INFORMAZIONI AGGIUNTIVE" img="/mura-fusion-restaurant-astro/locale-2.jpg">
+            <CheckmarkListItem text="Qualità degli ingredienti (pesce fresco giornaliero)" />
+            <CheckmarkListItem text="Opzioni per celiaci e vegani" />
+            <CheckmarkListItem text="Opzioni per chi non mangia sushi" />
+            <CheckmarkListItem text="Salse ecc. disponibili" />
+        </WhyUsSection>
+
         <ContactsSection />
     </main>
 </Layout>

@@ -1,25 +1,21 @@
 ---
-import CheckmarkListItem from "../CheckmarkListItem.astro";
+const { title, img } = Astro.props;
 ---
 
 <section>
     <div>
-        <h2>PERCHÉ MANGIARE DA NOI</h2>
+        <h2>{title}</h2>
 
         <ul>
-            <CheckmarkListItem text="Parcheggio ampio interno gratuito" />
-            <CheckmarkListItem text="Arredamento moderno e unico, adatto per famiglie, coppie e amici" />
-            <CheckmarkListItem text="Zone privé per un'esperienza tranquilla e originale" />
-            <CheckmarkListItem text="Ampia scelta di piatti, freschi e di qualità" />
-            <CheckmarkListItem text="Il bagno, parcheggio, ingresso e i tavoli sono accessibili per chi è in sedia a rotelle" />
+            <slot />
         </ul>
     </div>
 </section>
 
-<style>
+<style define:vars={{ img: `url('${img}')` }}>
     section {
         padding: 1rem;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/mura-fusion-restaurant-astro/locale.jpg');
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--img);
         background-position: 50% 50%;
     }
 
