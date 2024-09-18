@@ -27,6 +27,11 @@ const { text, url } = Astro.props;
         border-radius: 1rem;
         color: var(--black);
         text-decoration: none;
+        transition: background 0.2s, color 0.2s;
+    }
+    a:hover {
+        background: var(--black);
+        color: var(--white);
     }
 
     @media screen and (min-width: 1000px) {

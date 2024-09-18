@@ -1,8 +1,33 @@
+---
+import { Image } from "astro:assets";
+import review1Image from "../../assets/reviews/1.png";
+import review2Image from "../../assets/reviews/2.png";
+import review3Image from "../../assets/reviews/3.png";
+---
+
 <section>
     <h2>RECENSIONI</h2>
     <p>Scopri cosa dicono i nostri <strong>ospiti</strong> su Google Maps</p>
+
+    <div class="reviews">
+        <Image src={review1Image} alt="Recensione 1" />
+        <Image src={review2Image} alt="Recensione 2" />
+        <Image src={review3Image} alt="Recensione 3" />
+    </div>
 </section>
 
 <style>
+    .reviews {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 
+    @media screen and (min-width: 1000px) {
+        .reviews {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            
+        }
+    }
 </style>
