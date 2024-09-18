@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageTitle from "../components/PageTitle.astro";
+---
+
+<Layout title="Mura Fusion Restaurant - Sushi All You Can Eat a Rho">
+    <main>
+        <PageTitle
+            title="CONTATTACI"
+            subtitle="HOME | CONTATTI"
+        />
+
+        <section>
+            <h2>TUTTI I NOSTRI CONTATTI</h2>
+            
+            <div class="text-map">
+                <div class="contacts">
+                    <div>
+                        <h4><i class="bi bi-telephone-fill"></i> Prenotazioni e informazioni</h4>
+                        <p>
+                            Scrivici al numero Whatsapp <a href="https://wa.me/393667443406">366 744 3406</a><br />
+                            oppure chiamaci al numero <a href="tel:+39029303103">02 930 3103</a>
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h4><i class="bi bi-calendar-date-fill"></i> Indirizzo</h4>
+                        <p>Ci troviamo in via <a href="https://maps.app.goo.gl/9MzzHRHMU7ziPKHa6">Corso Europa, 85, 20017 Rho MI</a></p>
+                    </div>
+                </div>
+        
+                <iframe
+                    title="Posizione del ristorante"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.2714850012467!2d9.04775241540847!3d45.524742079101706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786eb17b8a49edb%3A0x47895ef4a388fa73!2sMura%20Fusion%20Restaurant!5e0!3m2!1sen!2sit!4v1677529076493!5m2!1sen!2sit"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                />
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .contacts div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .text-map {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    iframe {
+        border: 0;
+        height: 20rem;
+    }
+    h4 {
+        font-weight: bold;
+    }
+    a {
+        color: var(--black);
+    }
+
+    @media screen and (min-width: 1000px) {
+        .text-map {
+            flex-direction: row-reverse;
+            gap: 5rem;
+            align-items: center;
+        }
+        iframe {
+            width: 30rem;
+        }
+        h4 {
+            font-size: 1.75rem;
+        }
+        .contacts {
+            gap: 3rem;
+        }
+    }
+</style>
