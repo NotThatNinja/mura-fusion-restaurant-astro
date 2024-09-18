@@ -40,8 +40,8 @@ import Image9 from "../assets/gallery/9.jpg";
         <Image src={Image9} alt="Immagine 9" />
     </div>
 
-    <button type="button" onclick="changeSlides(-1)" class="prev">&#10094;</button>
-    <button type="button" onclick="changeSlides(1)" class="next">&#10095;</button>
+    <button type="button" class="prev">&#10094;</button>
+    <button type="button" class="next">&#10095;</button>
 </div>
 
 <style>
@@ -55,19 +55,20 @@ import Image9 from "../assets/gallery/9.jpg";
     button {
         border: 0;
         background: none;
+        color: var(--white);
         font-size: 2rem;
         cursor: pointer;
     }
     .prev {
         position: absolute;
         top: 50%;
-        left: 0;
+        left: 0.5rem;
         transform: translateY(-50%);
     }
     .next {
         position: absolute;
         top: 50%;
-        right: 0;
+        right: 0.5rem;
         transform: translateY(-50%);
     }
 
@@ -80,20 +81,29 @@ import Image9 from "../assets/gallery/9.jpg";
 </style>
 
 <script>
-    let slideIndex = 0;
+    let slideIndex = 1;
     showSlides();
 
+    function changeSlides(n) {
+        slideIndex += n;
+        showSlides();
+    }
+
     function showSlides() {
-        let i;
-        const slides = document.querySelectorAll('.slide');
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = 'none';
-        }
-        slideIndex++;
+        let slides = document.querySelectorAll('.slide');
         if (slideIndex > slides.length) {
             slideIndex = 1;
         }
+        if (slideIndex < 1) {
+            slideIndex = slides.length;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
         slides[slideIndex - 1].style.display = 'block';
-        setTimeout(showSlides, 3000);
     }
+
+    document.querySelector('.prev').addEventListener('click', () => changeSlides(-1));
+    document.querySelector('.next').addEventListener('click', () => changeSlides(1));
 </script>
