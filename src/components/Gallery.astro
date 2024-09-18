@@ -39,12 +39,38 @@ import Image9 from "../assets/gallery/9.jpg";
     <div class="slide">
         <Image src={Image9} alt="Immagine 9" />
     </div>
+
+    <button type="button" onclick="changeSlides(-1)" class="prev">&#10094;</button>
+    <button type="button" onclick="changeSlides(1)" class="next">&#10095;</button>
 </div>
 
 <style>
+    .gallery {
+        position: relative;
+    }
     .slide {
         display: none;
     }
+
+    button {
+        border: 0;
+        background: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .prev {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+    .next {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
 
     @media screen and (min-width: 1000px) {
         img {
