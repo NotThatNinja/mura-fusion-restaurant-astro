@@ -8,26 +8,22 @@ import heroImage from "../../assets/hero.jpg";
 
     <div>
         <h1>MURA FUSION RESTAURANT</h1>
-        <p>CUCINA CINESE E GIAPPONESE</p>
+        <h2>CUCINA CINESE E GIAPPONESE</h2>
         <a href="#">GUARDA I MENÙ</a>
     </div>
 </section>
 
 <style>
-    section {
-
-    }
-
     img {
         position: absolute;
         max-width: none;
         width: 100%;
-        height: calc(60% - var(--header-height));
+        height: calc(100% - var(--header-height));
         top: var(--header-height);
         left: 0;
         object-fit: cover;
         object-position: 0% 0%;
-        filter: brightness(50%);
+        filter: brightness(35%);
     }
 
     div {
@@ -43,7 +39,8 @@ import heroImage from "../../assets/hero.jpg";
         max-width: calc(100% - 3rem);
         color: var(--white);
     }
-    p {
+    h2 {
+        font-weight: 400;
         color: var(--white);
     }
     a {
@@ -52,5 +49,22 @@ import heroImage from "../../assets/hero.jpg";
         color: var(--black);
         background: var(--white);
         text-decoration: none;
+    }
+
+    @media screen and (min-width: 1000px) {
+        div {
+            gap: 2rem;
+        }
+        h1 {
+            max-width: none;
+            font-size: 5.8rem;
+        }
+        h2 {
+            font-size: 3.5rem;
+        }
+        a {
+            padding: 1rem 3rem;
+            font-size: 2.125rem;
+        }
     }
 </style>
