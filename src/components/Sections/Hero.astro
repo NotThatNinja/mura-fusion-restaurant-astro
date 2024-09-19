@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import heroImage from "../../assets/hero.jpg";
+import heroImage from "../../assets/hero.png";
 ---
 
 <section>
@@ -9,7 +9,7 @@ import heroImage from "../../assets/hero.jpg";
     <div>
         <h1>MURA FUSION RESTAURANT</h1>
         <h2>CUCINA CINESE E GIAPPONESE</h2>
-        <a href="#">GUARDA I MENÙ</a>
+        <a href="#">Guarda i menù</a>
     </div>
 </section>
 
@@ -25,8 +25,8 @@ import heroImage from "../../assets/hero.jpg";
         top: var(--header-height);
         left: 0;
         object-fit: cover;
-        object-position: 0% 0%;
-        filter: brightness(35%);
+        object-position: 50% 0%;
+        filter: brightness(75%);
     }
 
     div {
@@ -44,10 +44,11 @@ import heroImage from "../../assets/hero.jpg";
     }
     h1 {
         max-width: calc(100% - 3rem);
-        color: var(--accent);
-        font-size: 2.1rem;
+        color: #C3A202;
+        font-size: 2.5rem;
     }
     h2 {
+        font-size: 1.75rem;
         font-weight: 400;
         color: var(--white);
     }
@@ -74,20 +75,19 @@ import heroImage from "../../assets/hero.jpg";
             text-align: left;
             gap: 2rem;
             align-items: start;
-            top: 30%;
+            top: 40%;
             left: 6rem;
             max-width: calc(100% - 8rem);
         }
         h1 {
-            font-size: 5.8rem;
-            color: var(--white);
+            font-size: 5rem;
         }
         h2 {
-            font-size: 3.5rem;
+            font-size: 2.75rem;
         }
         a {
-            padding: 1rem 3rem;
-            font-size: 2.125rem;
+            padding: 1rem 1.5rem;
+            font-size: 1.5rem;
         }
     }
 </style>

@@ -15,8 +15,7 @@ const { title, img } = Astro.props;
 <style define:vars={{ img: `url('${img}')` }}>
     section {
         padding: 1rem;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--img);
-        background-position: 50% 50%;
+        background: var(--accent);
     }
 
     div {
@@ -42,6 +41,8 @@ const { title, img } = Astro.props;
     @media screen and (min-width: 1000px) {
         section {
             padding: 5rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--img);
+            background-position: 50% 50%;
         }
         div {
             padding: 2rem;
