@@ -1,0 +1,52 @@
+---
+const { title, text, icon, url } = Astro.props;
+---
+
+<div class="card">
+    <i class={icon} />
+
+    <div class="info">
+        <h3>{title}</h3>
+        <a href={url}>{text}</a>
+    </div>
+</div>
+
+<style>
+    .card {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        padding: 1rem;
+        background: #cdc498;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: left;
+    }
+
+    i {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+    a {
+        font-size: 1.25rem;
+        color: var(--white);
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    @media screen and (min-width: 1000px) {
+        .card {
+            padding: 1.5rem;
+        }
+        h3, a {
+            font-size: 2rem;
+        }
+    }
+</style>
