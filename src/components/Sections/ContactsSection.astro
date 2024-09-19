@@ -1,54 +1,37 @@
 ---
-import IconLink from "../IconLink.astro"
+import ContactCard from "../ContactCard.astro";
 ---
 
 <section>
     <h2>CONTATTI</h2>
-    
-    <div class="text-map">
-        <div class="contacts">
-            <IconLink url="mailto:nonloso@gmail.com" text="nonloso@gmail.com" icon="bi bi-envelope" />
-            <IconLink url="tel:+39029303103" text="02 930 3103" icon="bi bi-telephone" />
-            <IconLink url="https://wa.me/393667443406" text="366 744 3406" icon="bi bi-whatsapp" />
-        </div>
+    <p>Scrivici per <strong>prenotare</strong> un tavolo o semplicemente <strong>chiederci</strong> qualcosa</p>
 
-        <iframe
-            title="Posizione del ristorante"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.2714850012467!2d9.04775241540847!3d45.524742079101706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786eb17b8a49edb%3A0x47895ef4a388fa73!2sMura%20Fusion%20Restaurant!5e0!3m2!1sen!2sit!4v1677529076493!5m2!1sen!2sit"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+    <div class="contacts">
+        <ContactCard
+            title="Telefono"
+            text="02 930 3103"
+            icon=""
+            url=""
+        />
+        <ContactCard
+            title="Telefono"
+            text="02 930 3103"
+            icon=""
+            url=""
+        />
+        <ContactCard
+            title="Telefono"
+            text="02 930 3103"
+            icon=""
+            url=""
         />
     </div>
 </section>
 
 <style>
-    .text-map {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
     .contacts {
         display: flex;
         flex-direction: column;
-        gap: 0.25rem;
-    }
-    iframe {
-        border: 0;
-        height: 20rem;
-    }
-
-    @media screen and (min-width: 1000px) {
-        .text-map {
-            flex-direction: row;
-            gap: 5rem;
-            align-items: center;
-        }
-        .contacts {
-            gap: 2rem;
-        }
-        iframe {
-            width: 30rem;
-        }
+        gap: 1rem;
     }
 </style>
