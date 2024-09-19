@@ -8,7 +8,7 @@ import sushi3Image from "../../assets/sushi-3.png";
 ---
 
 <section>
-    <h2>{title}</h2>
+    <h2 id="menu">{title}</h2>
     <p>La lista di tutti i nostri menù <strong>aggiornata</strong> con piatti gustosi, freschi e di qualità</p>
 
     <div class="cards">
@@ -22,6 +22,9 @@ import sushi3Image from "../../assets/sushi-3.png";
 </section>
 
 <style>
+    h2 {
+        scroll-margin-top: 7rem;
+    }
     .cards {
         display: flex;
         flex-direction: column;
@@ -29,6 +32,9 @@ import sushi3Image from "../../assets/sushi-3.png";
     }
 
     @media screen and (min-width: 1000px) {
+        h2 {
+            scroll-margin-top: 12rem;
+        }
         .cards {
             display: grid;
             grid-template-columns: 1fr 1fr;
