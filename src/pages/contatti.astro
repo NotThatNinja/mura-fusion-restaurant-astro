@@ -7,15 +7,17 @@ import PageTitle from "../components/PageTitle.astro";
     <main>
         <PageTitle
             title="CONTATTACI"
-            subtitle="HOME | CONTATTI"
+            text1="HOME"
+            text2="CONTATTI"
+            url="/mura-fusion-restaurant-astro"
         />
 
         <section>
-            <h2>TUTTI I NOSTRI CONTATTI</h2>
             
             <div class="text-map">
                 <div class="contacts">
                     <div>
+                        <h2>TUTTI I NOSTRI CONTATTI</h2>
                         <h4><i class="bi bi-telephone-fill"></i> Prenotazioni e informazioni</h4>
                         <p>
                             Scrivici al numero Whatsapp <a href="https://wa.me/393667443406">366 744 3406</a><br />
@@ -24,7 +26,7 @@ import PageTitle from "../components/PageTitle.astro";
                     </div>
                     
                     <div>
-                        <h4><i class="bi bi-calendar-date-fill"></i> Indirizzo</h4>
+                        <h4><i class="bi bi-calendar-event-fill"></i> Indirizzo</h4>
                         <p>Ci troviamo in via <a href="https://maps.app.goo.gl/9MzzHRHMU7ziPKHa6">Corso Europa, 85, 20017 Rho MI</a></p>
                     </div>
                 </div>
@@ -51,6 +53,7 @@ import PageTitle from "../components/PageTitle.astro";
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        text-align: left;
     }
     .text-map {
         display: flex;

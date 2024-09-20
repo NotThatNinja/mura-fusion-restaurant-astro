@@ -12,7 +12,12 @@ import localeImage from "../assets/locale.jpg";
 
 <Layout title="Mura Fusion Restaurant - Sushi All You Can Eat a Rho">
     <main>
-        <PageTitle title="SU DI NOI" subtitle="HOME | CHI SIAMO" />
+        <PageTitle
+            title="SU DI NOI"
+            text1="HOME"
+            text2="CHI SIAMO"
+            url="/mura-fusion-restaurant-astro"
+        />
 
         <TextImage img={localeImage} alt="Il nostro locale" reverse>
             <div class="about-us">
@@ -34,11 +39,21 @@ import localeImage from "../assets/locale.jpg";
         </TextImage>
 
         <WhyUsSection title="PERCHÉ MANGIARE DA NOI" img="/mura-fusion-restaurant-astro/locale.jpg">
-            <CheckmarkListItem text="Parcheggio ampio interno gratuito" />
-            <CheckmarkListItem text="Arredamento moderno e unico, adatto per famiglie, coppie e amici" />
-            <CheckmarkListItem text="Zone privé per un'esperienza tranquilla e originale" />
-            <CheckmarkListItem text="Ampia scelta di piatti, freschi e di qualità" />
-            <CheckmarkListItem text="Il bagno, parcheggio, ingresso e i tavoli sono accessibili per chi è in sedia a rotelle" />
+            <CheckmarkListItem>
+                Parcheggio ampio interno gratuito
+            </CheckmarkListItem>
+            <CheckmarkListItem>
+                Arredamento moderno e unico, adatto per famiglie, coppie e amici
+            </CheckmarkListItem>
+            <CheckmarkListItem>
+                Zone privé per un'esperienza tranquilla e originale
+            </CheckmarkListItem>
+            <CheckmarkListItem>
+                Ampia scelta di piatti, freschi e di qualità
+            </CheckmarkListItem>
+            <CheckmarkListItem>
+                Il bagno, parcheggio, ingresso e i tavoli sono accessibili per chi è in sedia a rotelle
+            </CheckmarkListItem>
         </WhyUsSection>
 
         <ReviewsSection />
@@ -52,6 +67,9 @@ import localeImage from "../assets/locale.jpg";
         display: flex;
         flex-direction: column;
         gap: 1.25rem;
+    }
+    p {
+        text-align: left;
     }
     
     @media screen and (min-width: 1000px) {

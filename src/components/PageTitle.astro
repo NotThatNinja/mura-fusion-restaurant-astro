@@ -1,10 +1,10 @@
 ---
-const { title, subtitle } = Astro.props;
+const { title, text1, text2, url } = Astro.props;
 ---
 
 <section>
     <h2>{title}</h2>
-    <h3>{subtitle}</h3>
+    <h3><a href={url}>{text1}</a> | {text2}</h3>
 </section>
 
 <style>
@@ -15,8 +15,15 @@ const { title, subtitle } = Astro.props;
         background: white;
     }
     
-    h3 {
+    h3, a {
         font-weight: 400;
+    }
+    a {
+        text-decoration: none;
+        color: var(--black);
+    }
+    a:hover {
+        text-decoration: underline;
     }
 
     @media screen and (min-width: 1000px) {
@@ -24,7 +31,7 @@ const { title, subtitle } = Astro.props;
             gap: 1rem;
         }
 
-        h3 {
+        h3, a {
             font-size: 1.5rem;
         }
     }

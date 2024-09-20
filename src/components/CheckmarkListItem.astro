@@ -1,8 +1,7 @@
----
-const { text } = Astro.props;
----
-
-<li><i class="bi bi-check-lg" />{text}</li>
+<li>
+    <i class="bi bi-check-lg" />
+    <slot />
+</li>
 
 <style>
     li {
