@@ -18,8 +18,10 @@ const { text, url } = Astro.props;
         box-shadow: 1rem 0.5rem 1rem 0 rgba(0, 0, 0, 0.25);
     }
     p {
+        max-width: 60%;
         color: var(--white);
         font-weight: bold;
+        text-align: left;
     }
     a {
         padding: 0.3rem 0.75rem;
@@ -35,6 +37,9 @@ const { text, url } = Astro.props;
     }
 
     @media screen and (min-width: 1000px) {
+        p {
+            max-width: none;
+        }
         div {
             height: 6rem;
             padding: 0 1rem;

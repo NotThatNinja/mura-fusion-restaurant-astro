@@ -71,25 +71,34 @@ import Image8 from "../../assets/gallery/8.jpg";
         border: 0;
         background: none;
         color: var(--white);
-        font-size: 2rem;
+        font-size: 2.5rem;
         cursor: pointer;
     }
     .prev {
         position: absolute;
         top: 50%;
-        left: 0.5rem;
+        left: 0.75rem;
         transform: translateY(-50%);
     }
     .next {
         position: absolute;
         top: 50%;
-        right: 0.5rem;
+        right: 0.75rem;
         transform: translateY(-50%);
     }
 
     @media screen and (min-width: 1000px) {
         .slide img {
             height: 40rem;
+        }
+        button {
+            font-size: 5rem;
+        }
+        .prev {
+            left: 1.5rem;
+        }
+        .next {
+            right: 1.5rem;
         }
     }
 </style>
