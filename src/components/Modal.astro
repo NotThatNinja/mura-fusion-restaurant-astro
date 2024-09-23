@@ -1,0 +1,90 @@
+---
+const { url, buttonText } = Astro.props;
+---
+
+<div id="modal">
+    <h2>AVVISO</h2>
+    <p><slot /></p>
+    {buttonText !== undefined && <a href={url}>{buttonText}</a>}
+
+    <button id="close" type="button">&times;</button>
+</div>
+
+<style>
+    div {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: calc(100vw - 4rem);
+        height: calc(100vh - 4rem);
+        top: 0;
+        left: 0;
+        padding: 2rem;
+        background-color: rgba(0, 0, 0, 0.85);
+        z-index: 1000;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    p {
+        color: var(--white);
+        text-align: center;
+    }
+    a {
+        color: var(--white);
+        background: var(--accent);
+        text-decoration: none;
+        padding: 0.75rem 1.25rem;
+        font-weight: bold;
+    }
+    a:hover {
+        background: var(--white);
+        color: var(--accent);
+    }
+
+    button {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        background-color: transparent;
+        border: 0;
+        color: var(--white);
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+        h2 {
+            font-size: 3rem;
+        }
+        p, a {
+            font-size: 1.5rem;
+        }
+        button {
+            top: 3rem;
+            right: 10rem;
+        }
+    }
+</style>
+
+<script>
+    function closeModal() {
+        document.querySelector('#modal').remove();
+        document.querySelector('body').style.height = 'auto';
+        document.querySelector('body').style.overflowY = 'auto';
+    }
+
+    document.querySelector('#close').addEventListener('click', closeModal);
+
+    // Open modal here so that people with JS disabled don't see it because they wouldn't be able to close it and also we set session storage
+    if (sessionStorage.getItem('modal_viewed') !== '1') {
+        document.querySelector('#modal').style.display = 'flex';
+        document.querySelector('body').style.height = '100vh';
+        document.querySelector('body').style.overflowY = 'hidden';
+    }
+
+    sessionStorage.setItem('modal_viewed', '1');
+</script>
