@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Modal from '../components/Modal.astro';
 ---
 
 <!doctype html>
@@ -24,6 +25,11 @@ import Footer from "../components/Footer.astro";
         <title>{title}</title>
     </head>
     <body>
+        <Modal url="/mura-fusion-restaurant-astro/menu/menu-pranzo.pdf" buttonText="Scopri il menù">
+            <strong>Festeggia il capodanno con noi!</strong><br />
+            Musica dal vivo, divertimento e tanto cibo di qualità!
+        </Modal>
+
         <Header />
 
         <slot />
