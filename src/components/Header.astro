@@ -6,7 +6,7 @@ const currentUrl = Astro.url.pathname;
 ---
 
 <header>
-    <a href="/mura-fusion-restaurant-astro">
+    <a href="/">
         <Image loading="eager" class="logo" src={logoImage} alt="Mura Fusion Restaurant" />
     </a>
 
@@ -21,10 +21,10 @@ const currentUrl = Astro.url.pathname;
     <!-- Menu items -->
     <nav>
         <ul>
-            <li><a class={currentUrl === '/mura-fusion-restaurant-astro/' ? 'active' : ''} href="/mura-fusion-restaurant-astro">HOME</a></li>
-            <li><a class={currentUrl === '/mura-fusion-restaurant-astro/menu' ? 'active' : ''} href="/mura-fusion-restaurant-astro/menu">MENÙ</a></li>
-            <li><a class={currentUrl === '/mura-fusion-restaurant-astro/chi-siamo' ? 'active' : ''} href="/mura-fusion-restaurant-astro/chi-siamo">CHI SIAMO</a></li>
-            <li><a class={currentUrl === '/mura-fusion-restaurant-astro/contatti' ? 'active' : ''} href="/mura-fusion-restaurant-astro/contatti">CONTATTI</a></li>
+            <li><a class={currentUrl === '/' ? 'active' : ''} href="/">HOME</a></li>
+            <li><a class={currentUrl === '/menu' ? 'active' : ''} href="/menu">MENÙ</a></li>
+            <li><a class={currentUrl === '/chi-siamo' ? 'active' : ''} href="/chi-siamo">CHI SIAMO</a></li>
+            <li><a class={currentUrl === '/contatti' ? 'active' : ''} href="/contatti">CONTATTI</a></li>
         </ul>
     </nav>
 </header>
