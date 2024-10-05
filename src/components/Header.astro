@@ -22,9 +22,9 @@ const currentUrl = Astro.url.pathname;
     <nav>
         <ul>
             <li><a class={currentUrl === '/' ? 'active' : ''} href="/">HOME</a></li>
-            <li><a class={currentUrl === '/menu' ? 'active' : ''} href="/menu">MENÙ</a></li>
-            <li><a class={currentUrl === '/chi-siamo' ? 'active' : ''} href="/chi-siamo">CHI SIAMO</a></li>
-            <li><a class={currentUrl === '/contatti' ? 'active' : ''} href="/contatti">CONTATTI</a></li>
+            <li><a class={currentUrl === '/menu/' ? 'active' : ''} href="/menu">MENÙ</a></li>
+            <li><a class={currentUrl === '/chi-siamo/' ? 'active' : ''} href="/chi-siamo">CHI SIAMO</a></li>
+            <li><a class={currentUrl === '/contatti/' ? 'active' : ''} href="/contatti">CONTATTI</a></li>
         </ul>
     </nav>
 </header>
